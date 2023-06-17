@@ -27,7 +27,7 @@
   }
 </style>
 
-<body class="debug">
+<body class="">
   <header class="container-fluid"></header>
 
   <main class="container-fluid bg-dark text-light">
@@ -38,10 +38,10 @@
     </div>
     <div class="row">
       <div onclick="mineResource()" class="col-12 p-0">
-        <h1 class="text-center">🌔</h1>
-        <!-- <img
+        <!-- <h1 class="text-center">🌔</h1> -->
+        <img
           src="https://images.unsplash.com/photo-1676096420386-1f1bb37a0697?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2748&q=80"
-          alt="moon"> -->
+          alt="moon">
       </div>
     </div>
     <div class="row d-flex justify-content-center">
@@ -58,7 +58,8 @@
           <button onclick="buyPickaxe()">BUY Pickaxe</button>
         </div>
         <div class="row automatic-upgrades">
-          Automatic-Upgrades
+          <p id="automaticUpgrades">Total Rovers: </p>
+          <button onclick="buyRover()">BUY Rovers</button>
         </div>
       </div>
       <div class="col-6 stats">
