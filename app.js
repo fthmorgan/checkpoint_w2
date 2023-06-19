@@ -1,8 +1,6 @@
 // Global Variable
 let cheese = 10000;
 
-
-
 let clickUpgrades = [
   {
     name: 'pickaxe',
@@ -48,13 +46,23 @@ function update() {
   document.getElementById('dynamitePrice').innerText = clickUpgrades[1].price
   document.getElementById('roverPrice').innerText = automaticUpgrades[0].price
   document.getElementById('cheeseGraterPrice').innerText = automaticUpgrades[1].price
-
+  manualClickTotaler()
   automaticClickTotaler()
 }
 
 function automaticClickTotaler() {
-  let automaticClick = clickUpgrades.reduce((total, upgrade) => total + upgrade.quantity * upgrade.multiplier, 0);
+  let automaticClick = automaticUpgrades.reduce((total, upgrade) => total + upgrade.quantity * upgrade.multiplier, 0);
   document.getElementById('automaticClick').innerText = automaticClick;
+}
+
+function manualClickTotaler() {
+  let sum = 0
+  clickUpgrades.forEach(u => {
+    sum += u.multiplier * u.quantity
+  })
+
+  document.getElementById('manualClick').innerText = `👆 ${sum}`
+
 }
 
 
