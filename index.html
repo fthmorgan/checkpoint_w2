@@ -28,46 +28,46 @@
 </style>
 
 <body class="">
-  <header class="container-fluid"></header>
-
-  <main class="container-fluid bg-dark text-light">
-    <div class="row text-center">
-      <div class="col-12">
+  <header class="container-fluid">
+    <div class="row text-center text-light">
+      <div class="col-12 p-4">
         <h1>Moon Miner</h1>
       </div>
     </div>
+  </header>
+
+  <main class="container-fluid img text-light">
+
     <div class="row">
-      <div onclick="mineResource()" class="col-12 p-0">
+      <div class="col-12 p-0 text-center p-4">
         <!-- <h1 class="text-center">🌔</h1> -->
-        <img
-          src="https://images.unsplash.com/photo-1676096420386-1f1bb37a0697?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2748&q=80"
-          alt="moon">
+        <img onclick="mineResource()" src="C:\Users\Faith Morgan\Downloads\867837073.gif" alt="planet">
       </div>
     </div>
-    <div class="row d-flex justify-content-center">
-      <div class="col-2">
-        Clicks/sec
+    <div class="row d-flex justify-content-center text-center">
+      <div id="" class="col-2 border border-white">
+        0
       </div>
-      <div id="drawResource" class="col-3 text-center"></div>
-      <div class="col-2"> Clicks From Upgrades</div>
+      <div id="drawResource" class="col-3 text-center border border-white"></div>
+      <div id="automaticClick" class="col-2 border border-white"></div>
     </div>
     <div class="row">
       <div class="col-6 upgrades">
-        <div class="row click-upgrades">
-          <p id="clickUpgrades">Total Pickaxe: </p>
-          <button onclick="buyPickaxe()">BUY Pickaxe</button>
-        </div>
-        <div class="row automatic-upgrades">
-          <p id="automaticUpgrades">Total Rovers: </p>
-          <button onclick="buyRover()">BUY Rovers</button>
+        <div>Automatic Upgrades</div>
+        <div class="row click-upgrades border border-white p-4">
+          <p id="clickUpgradesPickaxe">Total Pickaxes: </p>
+          <button onclick="buyPickaxe()">BUY Pickaxe: <span id="pickaxePrice">Price</span></button>
+          <p id="clickUpgradesDynamite">Total Dynamite: </p>
+          <button onclick="buyDynamite()">BUY Dynamite: <span id="dynamitePrice">Price</span></button>
         </div>
       </div>
       <div class="col-6 stats">
-        <div class="row click-stats">
-          Click Stats
-        </div>
-        <div class="row automatic-stats">
-          Automatic Stats
+        <div>Click Upgrades</div>
+        <div class="row automatic-upgrades border border-white p-4">
+          <p id="automaticUpgradesRover">Total Rovers: </p>
+          <button onclick="buyRover()">BUY Rovers: <span id="roverPrice">Price</span></button>
+          <p id="automaticUpgradesCheeseGrater">Total Cheese Graters: </p>
+          <button onclick="buyCheeseGrater()">BUY Cheese Grater: <span id="cheeseGraterPrice">Price </span></button>
         </div>
       </div>
     </div>
