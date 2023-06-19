@@ -1,5 +1,5 @@
 // Global Variable
-let cheese = 0;
+let cheese = 10000;
 
 
 
@@ -60,6 +60,9 @@ function automaticClickTotaler() {
 
 function mineResource() {
   cheese++
+  useClickUpgrade()
+  // FIXME You need to look at all of your clickupgrades, and apply the multiplier * quantity here in this function
+  // FIXME you already have the function all written out, just call it here
   document.getElementById('drawResource').innerText = cheese
 
 }
@@ -81,7 +84,7 @@ function useAutomaticUpgrade() {
   automaticUpgrades.forEach(upgrade => {
     if (upgrade.quantity > 0) {
       cheese += upgrade.multiplier * upgrade.quantity
-      upgrade.quantity--
+      // upgrade.quantity--
     }
   })
   update()
@@ -109,10 +112,11 @@ function buyPickaxe() {
 
 function useClickUpgrade() {
   console.log('interval set');
+  // FIXME repeat this logic but add to scoped variable within  a new function, and draw that variable to document
   clickUpgrades.forEach(upgrade => {
     if (upgrade.quantity > 0) {
       cheese += upgrade.multiplier * upgrade.quantity
-      upgrade.quantity--
+      // upgrade.quantity--
     }
   })
   update()
@@ -168,5 +172,5 @@ function buyCheeseGrater() {
 
 
 // Run Functions
-useAutomaticUpgrade()
+// useAutomaticUpgrade()
 setInterval(useAutomaticUpgrade, 3000)
