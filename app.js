@@ -12,7 +12,7 @@ let clickUpgrades = [
     name: 'dynamite',
     price: 200,
     quantity: 0,
-    multiplier: 2
+    multiplier: 4
   }
 ];
 
@@ -56,12 +56,12 @@ function automaticClickTotaler() {
 }
 
 function manualClickTotaler() {
-  let sum = 0
+  let sum = 1
   clickUpgrades.forEach(u => {
     sum += u.multiplier * u.quantity
   })
 
-  document.getElementById('manualClick').innerText = `👆 ${sum}`
+  document.getElementById('manualClick').innerText = sum
 
 }
 
@@ -181,4 +181,5 @@ function buyCheeseGrater() {
 
 // Run Functions
 // useAutomaticUpgrade()
+update()
 setInterval(useAutomaticUpgrade, 3000)
